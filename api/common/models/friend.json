@@ -8,20 +8,13 @@
   "properties": {},
   "validations": [],
   "relations": {
-    "friend": {
+    "myUser": {
       "type": "belongsTo",
-      "model": "user",
-      "scope": {
-        "fields": {
-          "id": true,
-          "name": true,
-          "username": true
-        }
+      "model": "myUser",
+      "foreignKey": "friendId",
+      "options": {
+        "nestRemoting": true
       }
-    },
-    "user": {
-      "type": "belongsTo",
-      "model": "user"
     }
   },
   "acls": [],

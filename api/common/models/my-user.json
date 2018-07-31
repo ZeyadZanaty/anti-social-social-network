@@ -23,10 +23,12 @@
   "relations": {
     "friends": {
       "type": "hasMany",
-      "model": "user",
-      "foreignKey": "userId",
-      "through": "friend",
-      "keyThrough": "friendId"
+      "model": "friend",
+      "foreignKey": "friendId",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "friend"
     },
     "posts": {
       "type": "hasMany",
