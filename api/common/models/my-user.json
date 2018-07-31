@@ -1,0 +1,39 @@
+{
+  "name": "myUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "onlyfriends": {
+      "type": "string"
+    },
+    "onlyauthenticated": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "friends": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "userId",
+      "through": "friend",
+      "keyThrough": "friendId"
+    },
+    "posts": {
+      "type": "hasMany",
+      "model": "post",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

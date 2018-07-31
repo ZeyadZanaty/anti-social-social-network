@@ -1,0 +1,23 @@
+{
+  "name": "post",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "myUser": {
+      "type": "belongsTo",
+      "model": "myUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
