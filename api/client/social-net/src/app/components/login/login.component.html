@@ -1,10 +1,32 @@
-<div class="login">
-<span class="ui-float-label">
-    <input id="float-input1" type="text" size="30" pInputText>
-    <label for="float-input1">Username</label>
-</span>
-<span class="ui-float-label">
-    <input id="float-input2" type="password" size="30" pInputText>
-    <label for="float-input2">Password</label>
-</span>
+<img class ="logo" [src]="fullImagePath">
+<div class="head">
+  <span class ="login-label">Login</span>
+  <span class="ui-float-label">
+      <input [(ngModel)]="username" id="float-input" type="text" size="32" pInputText
+      pTooltip="Enter your username" tooltipPosition="top">
+      <label for="float-input">Username</label>
+  </span>
+  <span class="ui-float-label">
+      <input [(ngModel)]="password" id="float-input2" type="password" size="32" pInputText
+      pTooltip="Enter your password" tooltipPosition="top">
+      <label for="float-input2">Password</label>
+  </span>
+  <button pButton type="button" (click)="login()" label="Login"  class="ui-button-danger"></button>
+</div>
+<div class ="main">
+  <div class="title">
+  <img src="https://fontmeme.com/permalink/180731/b8d179a94f8e28168a323c4c373c3de4.png"
+   alt="anti-social-social-club-font" border="0">
+ </div>
+  <br><br>
+  <!-- <button pButton type="button" routerLink="/signup" label="Join"  class="ui-button-danger"></button> -->
+  <p-dialog [(visible)]="display" [width]="600" header="Sign up"
+  [modal]="true" [responsive]="true" [maximizable]="true"
+  [resizable]="true"[baseZIndex]="10000">
+    <app-signup></app-signup>
+  </p-dialog>
+  <button type="text" (click)="display = true" pButton  class="ui-button-danger" label="Join"></button>
+</div>
+<div class="footer">
+  <p>Copyrights</p>
 </div>

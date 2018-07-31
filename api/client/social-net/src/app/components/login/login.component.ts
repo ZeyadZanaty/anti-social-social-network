@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {InputTextModule} from 'primeng/inputtext';
+import { UserService } from '../../services/user.service'
 
 @Component({
   selector: 'app-login',
@@ -7,10 +7,18 @@ import {InputTextModule} from 'primeng/inputtext';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  fullImagePath: string;
+  username:string;
+  password:string;
+  constructor(private userService:UserService) {
+     this.fullImagePath = '../../assets/images/logo.png'
+  }
 
   ngOnInit() {
+
+  }
+  login(){
+
   }
 
 }
