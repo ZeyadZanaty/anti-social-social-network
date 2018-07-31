@@ -7,25 +7,25 @@
 <div class="super-wrapper">
 <div class="wrapper">
   <span class="ui-float-label">
-    <input [(ngModel)]="name" id="float-input" type="text" size="30" pInputText>
-    <label for="float-input">Name</label>
+    <input [(ngModel)]="name" id="float-input1" type="text" size="30" pInputText>
+    <label for="float-input1">Name</label>
 </span>
   <span class="ui-float-label">
-    <input [(ngModel)]="email" id="float-input" type="text" size="30" pInputText>
-    <label for="float-input">E-mail</label>
+    <input [(ngModel)]="email" id="float-input2" type="text" size="30" pInputText>
+    <label for="float-input2">E-mail</label>
 </span>
 <span class="ui-float-label">
-    <input [(ngModel)]="username" id="float-input" type="text" size="30" pInputText>
-    <label for="float-input">Username</label>
+    <input [(ngModel)]="username" id="float-input3" type="text" size="30" pInputText>
+    <label for="float-input3">Username</label>
 </span>
 <span class="ui-float-label">
-    <input [(ngModel)]="password" id="float-input" type="text" size="30" pInputText>
-    <label for="float-input">Password</label>
+    <input [(ngModel)]="password" id="float-input4" type="password" size="30" pInputText>
+    <label for="float-input4">Password</label>
 </span>
 <div class="gender-label">
   <span style="color:grey;">Gender</span><br>
-  <p-radioButton name="groupname" value=1 label="Male" [(ngModel)]="selectedValue">Male</p-radioButton>
-  <p-radioButton name="groupname" value=0 label="Female" [(ngModel)]="selectedValue">Female</p-radioButton>
+  <p-radioButton name="groupname" value=true label="Male" [(ngModel)]="gender">Male</p-radioButton>
+  <p-radioButton name="groupname" value=false label="Female" [(ngModel)]="gender">Female</p-radioButton>
 </div>
 <br><br>
 <button pButton type="button" (click)="register()" icon="pi pi-check"
