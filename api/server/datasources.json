@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://postgres:02011996@localhost:5432/blog",
+    "database": "blog",
+    "password": "02011996",
+    "name": "db",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}
