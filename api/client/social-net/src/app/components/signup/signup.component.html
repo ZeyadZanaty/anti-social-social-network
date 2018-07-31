@@ -1,25 +1,26 @@
 <body>
 <div class="title">
 <span>
-  Join the Antisocial <span style="color:red;">Social</span> Club!
+  Join our Antisocial <span style="color:red;
+  font-style: italic;">Social</span> Club!
 </span>
 </div>
 <div class="super-wrapper">
 <div class="wrapper">
   <span class="ui-float-label">
-    <input [(ngModel)]="name" id="float-input1" type="text" size="30" pInputText>
+    <input required [(ngModel)]="name" id="float-input1" type="text" size="30" pInputText>
     <label for="float-input1">Name</label>
 </span>
   <span class="ui-float-label">
-    <input [(ngModel)]="email" id="float-input2" type="text" size="30" pInputText>
+    <input required [(ngModel)]="email" id="float-input2" type="text" size="30" pInputText>
     <label for="float-input2">E-mail</label>
 </span>
 <span class="ui-float-label">
-    <input [(ngModel)]="username" id="float-input3" type="text" size="30" pInputText>
+    <input  required [(ngModel)]="username" id="float-input3" type="text" size="30" pInputText>
     <label for="float-input3">Username</label>
 </span>
 <span class="ui-float-label">
-    <input [(ngModel)]="password" id="float-input4" type="password" size="30" pInputText>
+    <input required [(ngModel)]="password" id="float-input4" type="password" size="30" pInputText>
     <label for="float-input4">Password</label>
 </span>
 <div class="gender-label">

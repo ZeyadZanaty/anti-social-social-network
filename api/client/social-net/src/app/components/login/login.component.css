@@ -34,6 +34,8 @@ input{
   margin-top: 50px;
   width: 100%;
   text-align: center;
+  background-image: url("../../../assets/images/bg2.jpg");
+  overflow: scroll;
 }
 .title{
   margin-left: 100px;
@@ -46,12 +48,17 @@ input{
   color: white;
 }
 .footer {
-    position: fixed;
+    position: absolute;
+    overflow: scroll;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 50px;
     background-color: black;
     color: white;
     text-align: center;
+}
+.button{
+
+  display: grid;
 }

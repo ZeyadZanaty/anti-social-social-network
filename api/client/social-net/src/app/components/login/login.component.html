@@ -18,14 +18,14 @@
   <img src="https://fontmeme.com/permalink/180731/b8d179a94f8e28168a323c4c373c3de4.png"
    alt="anti-social-social-club-font" border="0">
  </div>
-  <br><br>
-  <!-- <button pButton type="button" routerLink="/signup" label="Join"  class="ui-button-danger"></button> -->
+ <br>
+ <button type="text" (click)="display = true" pButton  class="ui-button-danger" label="Join"></button>
   <p-dialog [(visible)]="display" [width]="600" header="Sign up"
   [modal]="true" [responsive]="true" [maximizable]="true"
-  [resizable]="true"[baseZIndex]="10000">
+  [resizable]="true" [baseZIndex]="10000">
     <app-signup></app-signup>
   </p-dialog>
-  <button type="text" (click)="display = true" pButton  class="ui-button-danger" label="Join"></button>
+  <br><br>
 </div>
 <div class="footer">
   <p>Copyrights</p>

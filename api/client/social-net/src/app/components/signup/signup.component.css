@@ -1,3 +1,9 @@
+body{
+  background-image: url("../../../assets/images/bg.jpg");
+  padding-top: 1%;
+  margin: 0;
+  background-repeat: repeat-y;
+}
 .super-wrapper{
   margin: auto;
   background: black;
@@ -7,7 +13,6 @@
   padding-bottom: 40px;
   border-radius: 10px;
   text-align:center;
-
 }
 
 .wrapper{
@@ -38,6 +43,7 @@ span{
   font-size: 20px;
   text-align:center;
   margin-top:10px;
+  font-weight: bold;
 }
 
 img{
