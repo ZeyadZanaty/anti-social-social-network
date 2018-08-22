@@ -1,0 +1,64 @@
+.logo{
+  width: 7%;
+  height: 7%;
+  margin-right: 50px;
+  display: inline;
+  float: right;
+  margin-top: 10px;
+}
+.ui-float-label{
+margin-left: 20px;
+display: inline;
+font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+font-size: 12px;
+}
+*{
+  font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+}
+input{
+  margin-top: 2%;
+  padding-bottom: 3px;
+  border-radius: 3px;
+}
+.head{
+  width: auto;
+  height: 100px;;
+  padding: 10px;
+  background: black;
+}
+
+.ui-button-danger{
+  margin-left: 10px;
+}
+.main{
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../../../assets/images/bg2.jpg");
+  overflow: scroll;
+}
+.title{
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+.login-label{
+  display: block;
+  margin-left: 20px;
+  font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+  color: white;
+}
+.footer {
+    position: absolute;
+    overflow: scroll;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.button{
+
+  display: grid;
+}

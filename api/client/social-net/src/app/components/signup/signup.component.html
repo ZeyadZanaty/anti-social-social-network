@@ -1,3 +1,37 @@
-<p>
-  signup works!
-</p>
+<body>
+<div class="title">
+<span>
+  Join our Antisocial <span style="color:red;
+  font-style: italic;">Social</span> Club!
+</span>
+</div>
+<div class="super-wrapper">
+<div class="wrapper">
+  <span class="ui-float-label">
+    <input required [(ngModel)]="name" id="float-input1" type="text" size="30" pInputText>
+    <label for="float-input1">Name</label>
+</span>
+  <span class="ui-float-label">
+    <input required [(ngModel)]="email" id="float-input2" type="text" size="30" pInputText>
+    <label for="float-input2">E-mail</label>
+</span>
+<span class="ui-float-label">
+    <input  required [(ngModel)]="username" id="float-input3" type="text" size="30" pInputText>
+    <label for="float-input3">Username</label>
+</span>
+<span class="ui-float-label">
+    <input required [(ngModel)]="password" id="float-input4" type="password" size="30" pInputText>
+    <label for="float-input4">Password</label>
+</span>
+<div class="gender-label">
+  <span style="color:grey;">Gender</span><br>
+  <p-radioButton name="groupname" value=true label="Male" [(ngModel)]="gender">Male</p-radioButton>
+  <p-radioButton name="groupname" value=false label="Female" [(ngModel)]="gender">Female</p-radioButton>
+</div>
+<br><br>
+<button pButton type="button" (click)="register()" icon="pi pi-check"
+class="ui-button-danger" label="Register"></button>
+</div>
+</div>
+<img  src="../../../assets/images/antis.png">
+</body>

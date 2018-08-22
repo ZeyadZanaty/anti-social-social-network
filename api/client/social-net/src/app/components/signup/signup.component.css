@@ -1,0 +1,53 @@
+body{
+  background-image: url("../../../assets/images/bg.jpg");
+  padding-top: 1%;
+  margin: 0;
+  background-repeat: repeat-y;
+}
+.super-wrapper{
+  margin: auto;
+  background: black;
+  width: 400px;
+  background-size: cover;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  text-align:center;
+}
+
+.wrapper{
+  display:inline-grid;
+  width: ;
+  text-align: center;
+  margin: auto;
+}
+.gender-label{
+  float: left;
+  display: inline-grid;
+  text-align: left;
+}
+p-radioButton{
+  color: white;
+}
+span{
+  margin-top: 30px;
+  width: 100%;
+  margin:30 auto;
+}
+*{
+  align-content: center;
+  font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+}
+
+.title{
+  font-size: 20px;
+  text-align:center;
+  margin-top:10px;
+  font-weight: bold;
+}
+
+img{
+  display: block;
+  margin:auto;
+  width: 300px;
+}
