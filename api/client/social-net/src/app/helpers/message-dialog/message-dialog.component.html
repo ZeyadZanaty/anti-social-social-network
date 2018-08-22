@@ -1,0 +1,13 @@
+<p-dialog [showHeader]="false" [style]="{'overlow':'visible','background':'rgba(255,255,255,0.85)'}" [(visible)]="displayMessaageDialog" [width]="300" [responsive]="true" [baseZIndex]="10000" (onShow)="onShow()">
+    <h5 class="header">
+      <i class="{{iconClass}}">
+      </i>
+  {{header}}
+  </h5>
+    <hr>
+    <h6 class="header">{{displayMessage}}</h6>
+    <br>
+    <div class="div-button">
+    <p-button class="b-button" type="button" iconPos="right" icon="{{buttonIcon}}" label="{{buttonLabel}}" (click)="close()"></p-button>
+  </div>
+</p-dialog>

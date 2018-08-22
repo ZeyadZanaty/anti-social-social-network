@@ -2,16 +2,16 @@
 <div class="head">
   <span class ="login-label">Login</span>
   <span class="ui-float-label">
-      <input [(ngModel)]="username" id="float-input" type="text" size="32" pInputText
-      pTooltip="Enter your username" tooltipPosition="top">
-      <label for="float-input">Username</label>
+      <input [(ngModel)]="email" id="float-input" type="text" size="32" pInputText
+      pTooltip="Enter your E-mail" tooltipPosition="top">
+      <label for="float-input">E-mail</label>
   </span>
   <span class="ui-float-label">
       <input [(ngModel)]="password" id="float-input2" type="password" size="32" pInputText
       pTooltip="Enter your password" tooltipPosition="top">
       <label for="float-input2">Password</label>
   </span>
-  <button pButton type="button" (click)="login()" label="Login"  class="ui-button-danger"></button>
+  <button pButton type="button" (click)="onLogin()" label="Login"  class="ui-button-danger"></button>
 </div>
 <div class ="main">
   <div class="title">
@@ -30,3 +30,7 @@
 <div class="footer">
   <p>Copyrights</p>
 </div>
+
+
+<app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
+</app-message-dialog>

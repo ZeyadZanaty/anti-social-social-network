@@ -1,0 +1,14 @@
+.header{
+  font-family: 'Armata';
+  text-align: center;
+}
+
+.div-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.b-button{
+  margin: 0 auto;
+
+}

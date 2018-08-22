@@ -62,3 +62,10 @@ input{
 
   display: grid;
 }
+
+button{
+  background: rgba(220,0,10,0.8)!important;
+}
+button:hover{
+  background: rgba(220,0,10,0.7)!important;
+}

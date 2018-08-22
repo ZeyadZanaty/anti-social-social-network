@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -19,6 +21,7 @@ import {TooltipModule} from 'primeng/tooltip';
 import {SidebarModule} from 'primeng/sidebar';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
+import { MessageDialogComponent } from './helpers/message-dialog/message-dialog.component';
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import {DialogModule} from 'primeng/dialog';
     SignupComponent,
     UserComponent,
     PostComponent,
+    MessageDialogComponent,
     ProfileComponent,
     HomeComponent,
     EditUserComponent,
@@ -42,7 +46,9 @@ import {DialogModule} from 'primeng/dialog';
     TooltipModule,
     SidebarModule,
     RadioButtonModule,
-    DialogModule
+    DialogModule,
+    HttpModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

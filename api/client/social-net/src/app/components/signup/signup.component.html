@@ -25,13 +25,16 @@
 </span>
 <div class="gender-label">
   <span style="color:grey;">Gender</span><br>
-  <p-radioButton name="groupname" value=true label="Male" [(ngModel)]="gender">Male</p-radioButton>
-  <p-radioButton name="groupname" value=false label="Female" [(ngModel)]="gender">Female</p-radioButton>
+  <p-radioButton name="groupname" value="Male" label="Male" [(ngModel)]="gender">Male</p-radioButton>
+  <p-radioButton name="groupname" value="Female" label="Female" [(ngModel)]="gender">Female</p-radioButton>
 </div>
 <br><br>
-<button pButton type="button" (click)="register()" icon="pi pi-check"
+<button pButton type="button" (click)="registerUser()" icon="pi pi-check"
 class="ui-button-danger" label="Register"></button>
 </div>
 </div>
 <img  src="../../../assets/images/antis.png">
 </body>
+
+<app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
+</app-message-dialog>
