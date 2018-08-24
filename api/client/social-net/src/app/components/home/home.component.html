@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<body class="row">
+<body *ngIf="user" class="row">
   <div class="py-4 side" [@slideToRightFaster]>
     <div class="col-xs-12" routerLink="/profile/{{userID}}" class="nav-link" href="#"><i style="color:rgba(225,40,80,0.9)"  class="pi pi-user ml-3 mr-1"></i>
       <span> {{user.realm}}</span>
@@ -20,7 +20,10 @@
       Post updates for your non-existent friends..
       <button type="submit" class="btn btn-danger" (click)="onPost()">Post</button>
   </small>
-
+  <br>
+  <div *ngFor="let post of postsData" class="mt-1 post">
+    <app-post [postData]="post" [user]="user"></app-post>
+  </div>
   </div>
 </div>
 </body>

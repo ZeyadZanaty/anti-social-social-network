@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   display:boolean;
   user:any;
   postText:string;
+  postsData:any=[];
   constructor(private router:Router, private postService:PostsService,
     private route:ActivatedRoute,private userService:UserService) { }
 
@@ -24,6 +25,12 @@ export class HomeComponent implements OnInit {
     this.userID = +this.route.snapshot.paramMap.get('id');
     this.display=true;
     this.userService.getUser(this.userID,at).subscribe(user=>this.user=user);
+    this.getPosts();
+  }
+
+  getPosts(){
+    this.postService.getPosts(this.userID)
+    .subscribe(posts=>this.postsData=posts);
   }
 
   onPost(){
@@ -31,7 +38,8 @@ export class HomeComponent implements OnInit {
       "content":this.postText,
       "myUserId":this.userID
     }
-    this.postService.newPost(this.userID ,newPost).subscribe();
+    if(newPost.content)
+    this.postService.newPost(newPost).subscribe(()=>this.getPosts());
   }
 
 }
