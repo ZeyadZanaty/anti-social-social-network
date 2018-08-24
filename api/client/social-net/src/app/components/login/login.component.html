@@ -16,21 +16,20 @@
 <div class ="main">
   <div class="title">
   <img src="https://fontmeme.com/permalink/180731/b8d179a94f8e28168a323c4c373c3de4.png"
-   alt="anti-social-social-club-font" border="0">
+   alt="anti-social-social-club-font" border="0" width="50%">
+   <br>
+   <button type="text" (click)="display = true" pButton  class="button" label="Join"></button>
  </div>
- <br>
- <button type="text" (click)="display = true" pButton  class="ui-button-danger" label="Join"></button>
-  <p-dialog [(visible)]="display" [width]="600" header="Sign Up"
-  [modal]="true" [responsive]="true" [maximizable]="true"
-  [resizable]="true" [baseZIndex]="1000">
-    <app-signup></app-signup>
-  </p-dialog>
-  <br><br>
 </div>
 <div class="footer">
   <p>Copyrights</p>
 </div>
 
+<p-dialog [(visible)]="display" [width]="600" header="Sign Up"
+[modal]="true" [responsive]="true" [maximizable]="true"
+[resizable]="true" [baseZIndex]="1000">
+  <app-signup></app-signup>
+</p-dialog>
 
 <app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
 </app-message-dialog>

@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         data => {
           this.AccessToken=data.id;
           sessionStorage.setItem("at",data.id);
-          this.router.navigateByUrl('/home');
+          this.router.navigateByUrl('/home/'+data.userId);
           sessionStorage.setItem('isLoggedin','true');
           sessionStorage.setItem("id",data.userId);
         },

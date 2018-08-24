@@ -23,7 +23,7 @@ createUser(user){
   .map(user => user.json());
 }
 
-getUserBy(id,at){
+getUser(id,at){
   return this._http.get(this.usersUrl+id+"?access_token="+at)
   .map(data=>data.json());
 }

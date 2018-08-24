@@ -9,7 +9,7 @@
     "username": {
       "type": "string"
     },
-    "lastname": {
+    "gender": {
       "type": "string"
     },
     "onlyfriends": {

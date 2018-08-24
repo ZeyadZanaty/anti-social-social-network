@@ -22,6 +22,7 @@ import {SidebarModule} from 'primeng/sidebar';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
 import { MessageDialogComponent } from './helpers/message-dialog/message-dialog.component';
+import { NavbarComponent } from './helpers/navbar/navbar.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { MessageDialogComponent } from './helpers/message-dialog/message-dialog.
     ProfileComponent,
     HomeComponent,
     EditUserComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

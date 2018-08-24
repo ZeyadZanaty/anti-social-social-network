@@ -8,8 +8,8 @@ import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'profile/{id}', component: ProfileComponent },
+  { path: 'home/:id', component: HomeComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
 
 ];

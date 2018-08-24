@@ -1,5 +1,5 @@
 .logo{
-  width: 7%;
+  width: 5%;
   height: 7%;
   margin-right: 50px;
   display: inline;
@@ -21,25 +21,27 @@ input{
   border-radius: 3px;
 }
 .head{
-  width: auto;
-  height: 100px;;
   padding: 10px;
+  padding-bottom: 20px;
   background: black;
+  height: 100%;
 }
 
 .ui-button-danger{
   margin-left: 10px;
 }
 .main{
-  margin-top: 50px;
   width: 100%;
   text-align: center;
   background-image: url("../../../assets/images/bg2.jpg");
   overflow: scroll;
+  position: absolute;
 }
 .title{
+  margin-top: 50px;
   margin-left: 100px;
   margin-bottom: 20px;
+  overflow: scroll;
 }
 .login-label{
   display: block;
@@ -48,19 +50,20 @@ input{
   color: white;
 }
 .footer {
-    position: absolute;
+    position: fixed;
     overflow: scroll;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: 5%;
     background-color: black;
     color: white;
     text-align: center;
 }
 .button{
-
-  display: grid;
+  margin-top: 4%;
+  margin-left: -10%;
+  display: inline;
 }
 
 button{

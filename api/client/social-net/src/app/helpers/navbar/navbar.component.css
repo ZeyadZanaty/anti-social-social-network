@@ -1,0 +1,5 @@
+*.router-link-active {
+    color:rgba(225,40,80,0.9)!important;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+}

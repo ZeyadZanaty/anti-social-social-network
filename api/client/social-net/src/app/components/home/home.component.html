@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+<app-navbar></app-navbar>
+<body>
+  <div class="flex-column px-3 py-3">
+    <div routerLink="/profile/{{userID}}" class="nav-link" href="#"><i class="pi pi-user mr-1"></i>{{user.realm}}</div>
+    <div class="nav-link" href="#"><i class="pi pi-inbox mr-1"></i>Notifications</div>
+    <div class="nav-link" href="#"><i class="pi pi-users mr-1"></i>Friends</div>
+  </div>
+</body>
