@@ -36,6 +36,7 @@ input{
   background-image: url("../../../assets/images/bg2.jpg");
   overflow: scroll;
   position: absolute;
+  padding-bottom: 10%;
 }
 .title{
   margin-top: 50px;

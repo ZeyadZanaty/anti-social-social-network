@@ -3,3 +3,8 @@
     font-weight: 500;
     background: rgba(255,255,255,0.1);
 }
+.user-avatar {
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 2px solid #FFF;
+}

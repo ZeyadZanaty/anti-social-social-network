@@ -1,8 +1,26 @@
 <app-navbar></app-navbar>
-<body>
-  <div class="flex-column px-3 py-3">
-    <div routerLink="/profile/{{userID}}" class="nav-link" href="#"><i class="pi pi-user mr-1"></i>{{user.realm}}</div>
-    <div class="nav-link" href="#"><i class="pi pi-inbox mr-1"></i>Notifications</div>
-    <div class="nav-link" href="#"><i class="pi pi-users mr-1"></i>Friends</div>
+<body class="row">
+  <div class="py-4 side" [@slideToRightFaster]>
+    <div class="col-xs-12" routerLink="/profile/{{userID}}" class="nav-link" href="#"><i style="color:rgba(225,40,80,0.9)"  class="pi pi-user ml-3 mr-1"></i>
+      <span> {{user.realm}}</span>
+        <img class="user-avatar ml-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
+    </div>
+    <div class="nav-link col-xs-12" href="#"><i style="color:rgba(225,40,80,0.9)" class="pi pi-inbox ml-3 mr-1"></i>
+      <span>Notifications</span>
+    </div>
+    <div class="col-xs-12 mt-1" class="nav-link" href="#"><i style="color:rgba(225,40,80,0.9)"  class="pi pi-users ml-3 mr-1"></i>
+      <span>Friends</span>
+    </div>
   </div>
+  <div class="py-4 main">
+    <div class="mt-2">
+    <label for="post">Why are you even here?</label>
+    <textarea [(ngModel)]="postText" rows="5" placeholder="Yeah sure, someone's gonna read this.."cols="50" type="text" id="post" class="form-control" aria-describedby="passwordHelpBlock"></textarea>
+    <small id="passwordHelpBlock" class="form-text text-muted">
+      Post updates for your non-existent friends..
+      <button type="submit" class="btn btn-danger" (click)="onPost()">Post</button>
+  </small>
+
+  </div>
+</div>
 </body>

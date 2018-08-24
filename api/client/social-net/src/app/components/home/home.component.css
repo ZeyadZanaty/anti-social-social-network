@@ -1,3 +1,32 @@
 body{
   background: rgba(220,220,220,0.7)!important;
+  margin-top: 50px;
+}
+
+.side{
+  background: rgba(245,245,245,0.8)!important;
+  overflow: hidden;
+  width: 15%;
+  position: fixed;
+  height: 100%;
+}
+.user-avatar {
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 2px solid #FFF;
+}
+
+.nav-link:hover{
+  border-radius: 10px;
+  background: rgba(10,10,10,0.6);
+  cursor: pointer;
+  color:white!important;
+}
+div.main {
+  margin-left: 25%;
+  padding: 1px 1px;
+  height: 1000px;
+}
+.btn{
+float: right!important;
 }

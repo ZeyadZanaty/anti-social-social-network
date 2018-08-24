@@ -28,5 +28,9 @@ getUser(id,at){
   .map(data=>data.json());
 }
 
+post(id,post){
+  return this._http.post(this.usersUrl+id+"/posts",post)
+  .map(data => data.json());
+}
 
 }

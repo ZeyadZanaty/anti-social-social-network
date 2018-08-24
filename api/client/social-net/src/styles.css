@@ -50,4 +50,6 @@ table {
 
 html{
 	background: rgba(220,220,220,0.7)!important;
+	min-height:100%;
+    position:relative;
 }
