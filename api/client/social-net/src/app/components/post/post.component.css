@@ -23,10 +23,13 @@
     border: 2px solid #FFF;
 }
 
-.card-header:hover{
+.card-header span:hover,.card-header img:hover{
   cursor: pointer;
   text-decoration: underline;
 
+}
+.react a{
+  color:rgba(225,40,80,1)!important;
 }
 
 @media screen and (max-width: 450px) {

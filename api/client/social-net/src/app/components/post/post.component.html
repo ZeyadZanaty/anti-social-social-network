@@ -1,9 +1,9 @@
 <div class="card">
-  <div class="card-header" aria-describedby="passwordHelpBlock">
+  <div class="card-header" aria-describedby="date">
     <img class="user-avatar mr-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
-    {{user.realm}}
-    <small id="passwordHelpBlock" class="form-text text-muted">
-      {{postData.time | date:'medium'}}
+    <span>{{user.realm}}</span>
+    <small id="date" class="form-text text-muted">
+      <span>{{postData.time | date:'medium'}}</span>
   </small>
   </div>
   <div class="card-body">
@@ -13,10 +13,13 @@
   <div *ngIf="postData.content"class="image-wrap">
     <img src="../../../assets/images/def_pp.jpg"/>
   </div>
-  <div class="card-body">
-  <a href="#" class="btn btn-primary ml-3">Like</a>
-  <a href="#" class="btn btn-danger ml-3">Repost</a>
-  <a href="#" class="btn btn-success ml-3">Reply</a>
+  <div class="react card-body">
+  <a href="#" class="ml-3"><i class="mr-1 far fa-thumbs-up"></i>Like</a>
+  <a href="#" class="ml-3"><i class="mr-1 fas fa-heart"></i>Love</a>
+  <a href="#" class="ml-3"><i class="mr-1 far fa-meh-rolling-eyes"></i>Meh</a>
+  <a href="#" class="ml-3"><i class="mr-1 fas fa-gavel"></i>Judge</a>
+  <a href="#" class="ml-3"><i class="mr-1 fas fa-bullhorn"></i>Repost</a>
+  <a href="#" class="ml-3"><i class="mr-1 far fa-comment"></i>Reply</a>
 </div>
 </div>
 <hr>
