@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
   onPost(){
     let newPost = {
       "content":this.postText,
-      "myUserId":this.userID
+      "myUserId":this.userID,
+      "time":Date.now()
     }
     if(newPost.content)
     this.postService.newPost(newPost).subscribe(()=>this.getPosts());

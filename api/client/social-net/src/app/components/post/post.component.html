@@ -1,6 +1,10 @@
 <div class="card">
-  <div class="card-header">
+  <div class="card-header" aria-describedby="passwordHelpBlock">
+    <img class="user-avatar mr-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
     {{user.realm}}
+    <small id="passwordHelpBlock" class="form-text text-muted">
+      {{postData.time | date:'medium'}}
+  </small>
   </div>
   <div class="card-body">
     <p class="card-text">{{postData.content}}.</p>

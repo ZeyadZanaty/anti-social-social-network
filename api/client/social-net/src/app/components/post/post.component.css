@@ -17,6 +17,17 @@
     margin:auto;
     vertical-align: middle;
 }
+.user-avatar {
+    -webkit-border-radius: 20%;
+            border-radius: 20%;
+    border: 2px solid #FFF;
+}
+
+.card-header:hover{
+  cursor: pointer;
+  text-decoration: underline;
+
+}
 
 @media screen and (max-width: 450px) {
   .image-wrap{

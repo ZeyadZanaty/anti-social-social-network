@@ -18,7 +18,7 @@ export class PostsService {
   }
 
   getPosts(id){
-    return this._http.get(this.postsUrl+"?filter=[where][myUserId]="+id)
+    return this._http.get(this.postsUrl+"?filter[order]=time ASC&filter=[where][myUserId]="+id)
     .map(data => data.json());
   }
 }

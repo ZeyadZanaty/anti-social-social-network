@@ -8,6 +8,9 @@
   "properties": {
     "content": {
       "type": "string"
+    },
+    "time": {
+      "type": "Date"
     }
   },
   "validations": [],
