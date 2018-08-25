@@ -4,11 +4,15 @@
   </div>
   <div class="card-body">
     <p class="card-text">{{postData.content}}.</p>
-    <div style="width:500px;height:400px;">
-    <img src="../../../assets/images/def_pp.jpg"/>
-    </div>
     <br>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+  <div *ngIf="postData.content"class="image-wrap">
+    <img src="../../../assets/images/def_pp.jpg"/>
+  </div>
+  <div class="card-body">
+  <a href="#" class="btn btn-primary ml-3">Like</a>
+  <a href="#" class="btn btn-danger ml-3">Repost</a>
+  <a href="#" class="btn btn-success ml-3">Reply</a>
+</div>
 </div>
 <hr>

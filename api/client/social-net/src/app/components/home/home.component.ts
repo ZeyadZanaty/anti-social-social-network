@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
+import { NavigationEnd } from '@angular/router';
 import { UserService } from "../../services/user.service";
 import { slideToRightFaster } from '../../router.animations'
 import { PostsService } from "../../services/posts.service";
@@ -17,6 +18,8 @@ export class HomeComponent implements OnInit {
   user:any;
   postText:string;
   postsData:any=[];
+  isActive = true;
+  showMenu = '';
   constructor(private router:Router, private postService:PostsService,
     private route:ActivatedRoute,private userService:UserService) { }
 

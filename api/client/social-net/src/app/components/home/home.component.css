@@ -1,6 +1,7 @@
 body{
   background: rgba(220,220,220,0.7)!important;
   margin-top: 50px;
+  overflow-x: hidden;
 }
 
 .side{
@@ -32,5 +33,25 @@ float: right!important;
 }
 
 .post{
-  margin-top:10px
+  margin-top:10px;
+  margin-right: -50px;
+}
+
+@media screen and (max-width: 992px) {
+    .side {
+        top: 50px;
+        left: 0px;
+        width: 0px;
+    }
+    div.main{
+      margin-left:5%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+  .post{
+     width:350px!important;
+  }
+
 }
