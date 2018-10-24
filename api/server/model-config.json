@@ -18,7 +18,14 @@
   },
   "AccessToken": {
     "dataSource": "db",
-    "public": false
+    "public": false,
+    "relations": {
+      "myUser": {
+        "type": "belongsTo",
+        "model": "myUser",
+        "foreignKey": "myUserId"
+      }
+    }
   },
   "ACL": {
     "dataSource": "db",

@@ -12,6 +12,7 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.postData);
   }
 
 }

@@ -23,12 +23,13 @@
   "relations": {
     "friends": {
       "type": "hasMany",
-      "model": "friend",
-      "foreignKey": "friendId",
+      "model": "myUser",
+      "foreignKey": "myUserId",
+      "through": "friend",
+      "keyThrough": "friendId",
       "options": {
         "nestRemoting": true
-      },
-      "through": "friend"
+      }
     },
     "posts": {
       "type": "hasMany",
@@ -36,6 +37,13 @@
       "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+          "accessType": "READ",
+          "principalType": "ROLE",
+          "principalId": "$authenticated",
+          "permission": "ALLOW"
+        }
+  ],
   "methods": {}
 }

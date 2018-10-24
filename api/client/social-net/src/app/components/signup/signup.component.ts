@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   displayFailSuccess:boolean = false;
   displayMessaageDialog:boolean;
   displayMessage:String;
+  AccessToken;
   constructor(private userService: UserService,public router: Router) { };
 
 
@@ -53,7 +54,21 @@ export class SignupComponent implements OnInit {
           this.displayMessage="Registration Successfull! You'll be redirected to login in 5 seconds...";
           this.displayFailSuccess=false;
           this.displayMessaageDialog=true;
-          setTimeout(()=>{ this.router.navigateByUrl('/login');},5000);
+          let credentials ={"email":user.email,"password":this.password}
+          this.userService.userLogin(credentials).subscribe(
+          data => {
+            this.AccessToken=data.id;
+            sessionStorage.setItem("at",data.id);
+            this.router.navigateByUrl('/home/'+data.userId);
+            sessionStorage.setItem('isLoggedin','true');
+            sessionStorage.setItem("id",data.userId);
+          },
+          err=>{
+            this.displayMessage='Wrong E-mail/Password Combination';
+            this.displayFailSuccess=true;
+            this.displayMessaageDialog = true;
+          });
+          // setTimeout(()=>{ this.router.navigateByUrl('/login');},5000);
         },
         err =>{
           this.displayMessage="E-mail/Username already in use...";

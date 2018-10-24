@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class PostsService {
 
   postsUrl:string = "http://localhost:3000/api/posts/";
+  usersUrl:string = "http://localhost:3000/api/myUsers/"
   constructor (private _http: Http, public router:Router) {};
 
   newPost(post){
@@ -17,8 +18,13 @@ export class PostsService {
     .map(data => data.json());
   }
 
-  getPosts(id){
-    return this._http.get(this.postsUrl+"?filter[order]=time ASC&filter=[where][myUserId]="+id)
+  getMyPosts(id){
+    return this._http.get(this.postsUrl+"?filter[where][myUserId]="+id+"&filter[include][myUser]")
+    .map(data => data.json());
+  }
+
+  getFriendsPosts(id){
+    return this._http.get(this.usersUrl+id+"/friends?filter[include][posts]=myUser")
     .map(data => data.json());
   }
 }

@@ -32,9 +32,18 @@ export class HomeComponent implements OnInit {
   }
 
   getPosts(){
-    this.postService.getPosts(this.userID)
-    .subscribe(posts=>this.postsData=posts);
+    this.postService.getMyPosts(this.userID)
+    .subscribe(posts=>this.postsData.push(...posts));
+
+    this.postService.getFriendsPosts(this.userID)
+    .subscribe(friends=>{
+      for(let friend of friends){
+        for(let post of friend.posts)
+        this.postsData.push(post)
+      }
+    });
   }
+
 
   onPost(){
     let newPost = {

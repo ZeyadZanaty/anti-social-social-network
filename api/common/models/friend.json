@@ -5,13 +5,24 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties":
+  {
+    "date": {
+      "type": "Date"
+    }
+  },
   "validations": [],
   "relations": {
-    "myUser": {
+    "friend": {
       "type": "belongsTo",
       "model": "myUser",
-      "foreignKey": "friendId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "myUser":{
+      "type": "belongsTo",
+      "model": "myUser",
       "options": {
         "nestRemoting": true
       }
