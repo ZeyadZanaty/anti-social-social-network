@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   getPosts(){
     this.postService.getMyPosts(this.userID)
-    .subscribe(posts=>this.postsData.push(...posts));
+    .subscribe(posts=>this.postsData.unshift(...posts));
 
     this.postService.getFriendsPosts(this.userID)
     .subscribe(friends=>{
