@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     let at=sessionStorage.getItem("at");
-    this.userID = +this.route.snapshot.paramMap.get('id');
+    this.userID = sessionStorage.getItem("id");
     this.userService.getUser(this.userID,at).subscribe(user=>this.user=user);
   }
 

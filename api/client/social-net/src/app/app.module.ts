@@ -6,6 +6,8 @@ import {ButtonModule} from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
+import { AuthGuard } from './authentication/authentication';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -24,7 +26,6 @@ import {DialogModule} from 'primeng/dialog';
 import { MessageDialogComponent } from './helpers/message-dialog/message-dialog.component';
 import { NavbarComponent } from './helpers/navbar/navbar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { NavbarComponent } from './helpers/navbar/navbar.component';
     HomeComponent,
     EditUserComponent,
     NavbarComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { NavbarComponent } from './helpers/navbar/navbar.component';
     HttpModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
