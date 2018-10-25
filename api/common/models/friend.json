@@ -5,8 +5,7 @@
   "options": {
     "validateUpsert": true
   },
-  "properties":
-  {
+  "properties": {
     "date": {
       "type": "Date"
     }
@@ -20,7 +19,7 @@
         "nestRemoting": true
       }
     },
-    "myUser":{
+    "myUser": {
       "type": "belongsTo",
       "model": "myUser",
       "options": {

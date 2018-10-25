@@ -35,15 +35,23 @@
       "type": "hasMany",
       "model": "post",
       "foreignKey": ""
+    },
+    "reaction": {
+      "type": "hasMany",
+      "model": "reaction",
+      "foreignKey": "myUserId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [
     {
-          "accessType": "READ",
-          "principalType": "ROLE",
-          "principalId": "$authenticated",
-          "permission": "ALLOW"
-        }
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
   ],
   "methods": {}
 }

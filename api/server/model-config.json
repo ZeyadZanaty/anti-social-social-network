@@ -53,5 +53,9 @@
   "friend": {
     "dataSource": "db",
     "public": true
+  },
+  "reaction": {
+    "dataSource": "db",
+    "public": true
   }
 }

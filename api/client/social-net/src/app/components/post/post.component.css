@@ -30,8 +30,12 @@
 }
 .react a{
   color:rgba(225,40,80,1)!important;
-}
 
+}
+.react a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
 @media screen and (max-width: 450px) {
   .image-wrap{
      width:350px;

@@ -1,29 +1,30 @@
 {
-  "name": "post",
+  "name": "reaction",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "content": {
-      "type": "string"
-    },
-    "time": {
-      "type": "Date"
+    "type": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
+    "post": {
+      "type": "belongsTo",
+      "model": "post",
+      "foreignKey": "postId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
     "myUser": {
       "type": "belongsTo",
       "model": "myUser",
-      "foreignKey": ""
-    },
-    "reaction": {
-      "type": "hasMany",
-      "model": "reaction",
-      "foreignKey": "postId",
+      "foreignKey": "myUserId",
       "options": {
         "nestRemoting": true
       }
