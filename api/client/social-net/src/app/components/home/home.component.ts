@@ -28,20 +28,32 @@ export class HomeComponent implements OnInit {
     this.userID = +this.route.snapshot.paramMap.get('id');
     this.display=true;
     this.userService.getUser(this.userID,at).subscribe(user=>this.user=user);
-    this.getPosts();
+    this.postsData=this.getPosts();
   }
 
   getPosts(){
+    let postsData =[]
     this.postService.getMyPosts(this.userID)
-    .subscribe(posts=>this.postsData.unshift(...posts));
+    .subscribe(posts=>{
+      postsData.push(...posts);
+      postsData.sort(function(a, b){
+      var dateA=new Date(a.time), dateB=new Date(b.time)
+      return dateA<dateB?1:-1;
+    });
+    });
 
     this.postService.getFriendsPosts(this.userID)
     .subscribe(friends=>{
       for(let friend of friends){
         for(let post of friend.posts)
-        this.postsData.push(post)
+        postsData.push(post);
       }
+      postsData.sort(function(a, b){
+      var dateA=new Date(a.time), dateB=new Date(b.time)
+      return dateA<dateB?1:-1;
     });
+  });
+    return postsData;
   }
 
 
