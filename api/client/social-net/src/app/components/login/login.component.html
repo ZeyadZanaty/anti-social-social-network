@@ -3,12 +3,12 @@
   <span class ="login-label">Login</span>
   <span class="ui-float-label">
       <input [(ngModel)]="email" id="float-input" type="text" size="32" pInputText
-      pTooltip="Enter your E-mail" tooltipPosition="top">
+      pTooltip="Enter your E-mail" tooltipPosition="top" (keyup.enter)="onLogin()">
       <label for="float-input">E-mail</label>
   </span>
   <span class="ui-float-label">
       <input [(ngModel)]="password" id="float-input2" type="password" size="32" pInputText
-      pTooltip="Enter your password" tooltipPosition="top">
+      pTooltip="Enter your password" tooltipPosition="top" (keyup.enter)="onLogin()">
       <label for="float-input2">Password</label>
   </span>
   <button pButton type="button" (click)="onLogin()" label="Login"  class="ui-button-danger"></button>
