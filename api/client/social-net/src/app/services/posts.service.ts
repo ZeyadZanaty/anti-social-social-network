@@ -25,7 +25,7 @@ export class PostsService {
   }
 
   getFriendsPosts(id){
-    return this._http.get(this.usersUrl+id+"/friends?filter[include][posts]=myUser}")
+    return this._http.get(this.usersUrl+id+"/friends?filter[include][posts]=myUser")
     .map(data => data.json());
   }
   react(reaction){

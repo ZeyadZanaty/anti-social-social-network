@@ -23,7 +23,7 @@ export class PostComponent implements OnInit {
   }
 
   getUserReaction(){
-    this.postService.findOneReaction(this.postData.myUser.id,this.postData.id)
+    this.postService.findOneReaction(this.user.id,this.postData.id)
     .subscribe((react)=>{
       this.userReaction=react.type;
     },
@@ -41,20 +41,20 @@ export class PostComponent implements OnInit {
   }
 
   onReact(type){
-    this.postService.findOneReaction(this.postData.myUser.id,this.postData.id)
+    this.postService.findOneReaction(this.user.id,this.postData.id)
     .subscribe((react)=>{
       if(react.type==type){
         this.postService.deleteReaction(react.id).subscribe(()=>this.ngOnInit());
       }
       else{
         this.postService.deleteReaction(react.id).subscribe(()=>this.ngOnInit());
-        setTimeout(()=>this.postService.react({"type":type,"myUserId":this.postData.myUser.id,"postId":this.postData.id})
+        setTimeout(()=>this.postService.react({"type":type,"myUserId":this.user.id,"postId":this.postData.id})
         .subscribe(()=>this.ngOnInit()),5);
 
       }
     },
     err=>{
-      this.postService.react({"type":type,"myUserId":this.postData.myUser.id,"postId":this.postData.id})
+      this.postService.react({"type":type,"myUserId":this.user.id,"postId":this.postData.id})
       .subscribe(()=>this.ngOnInit());
     });
   }

@@ -66,17 +66,23 @@ export class HomeComponent implements OnInit {
       "myUserId":this.userID,
       "time":Date.now()
     }
-    if(newPost.content)
+    if(newPost.content){
     this.postService.newPost(newPost).subscribe(
     post=>{
       post['myUser']=this.user;
       this.postsData.unshift(post);
+      this.postText=null;
     }
     ,err=>{
       this.displayMessage='Something went wrong..';
       this.displayFailSuccess=true;
       this.displayMessaageDialog = true;
     });
+  }else{
+    this.displayMessage='Add Something before posting..';
+    this.displayFailSuccess=true;
+    this.displayMessaageDialog = true;
   }
+}
 
 }
