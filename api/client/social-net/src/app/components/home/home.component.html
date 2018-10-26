@@ -22,10 +22,18 @@
       <button type="submit" class="btn btn-danger" (click)="onPost()">Post</button>
   </small>
 </div>
-  <br>
+<div *ngIf="reload" class="py-4">
+  <div class="mt-2" style="">
+    reload
+  </div>
+</div>
+<br>
   <div *ngFor="let post of postsData" class="mt-1 post">
     <app-post [postData]="post" [user]="user"></app-post>
   </div>
   </div>
 </div>
 </body>
+
+<app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
+</app-message-dialog>

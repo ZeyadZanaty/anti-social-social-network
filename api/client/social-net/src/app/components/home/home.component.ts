@@ -20,6 +20,9 @@ export class HomeComponent implements OnInit {
   postsData:any=[];
   isActive = true;
   showMenu = '';
+  displayFailSuccess:boolean = false;
+  displayMessaageDialog:boolean = false;
+  displayMessage:String;
   constructor(private router:Router, private postService:PostsService,
     private route:ActivatedRoute,private userService:UserService) { }
 
@@ -64,7 +67,16 @@ export class HomeComponent implements OnInit {
       "time":Date.now()
     }
     if(newPost.content)
-    this.postService.newPost(newPost).subscribe(()=>this.getPosts());
+    this.postService.newPost(newPost).subscribe(
+    post=>{
+      post['myUser']=this.user;
+      this.postsData.unshift(post);
+    }
+    ,err=>{
+      this.displayMessage='Something went wrong..';
+      this.displayFailSuccess=true;
+      this.displayMessaageDialog = true;
+    });
   }
 
 }
