@@ -37,4 +37,12 @@ export class PostsService {
     return this._http.get(this.postsUrl+id+"/reaction")
     .map(data => data.json());
   }
+  findOneReaction(userid,postid){
+    return this._http.get(this.reactionsUrl+"findOne?filter[where][myUserId]="+userid+"&filter[where][postId]="+postid)
+    .map(data => data.json());
+  }
+  deleteReaction(reactionid){
+    return this._http.delete(this.reactionsUrl+reactionid)
+    .map(data => data.json());
+  }
 }

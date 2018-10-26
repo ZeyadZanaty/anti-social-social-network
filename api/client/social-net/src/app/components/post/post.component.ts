@@ -27,7 +27,22 @@ export class PostComponent implements OnInit {
     });
   }
   onReact(type){
-    this.postService.react({"type":type,"myUserId":this.postData.myUser.id,"postId":this.postData.id})
-    .subscribe(()=>this.getPostReactions());
+    this.postService.findOneReaction(this.postData.myUser.id,this.postData.id)
+    .subscribe((react)=>{
+      if(react.type==type){
+        this.postService.deleteReaction(react.id).subscribe(()=>this.getPostReactions());
+      }
+      else{
+        this.postService.deleteReaction(react.id).subscribe(()=>this.getPostReactions());
+        setTimeout(()=>this.postService.react({"type":type,"myUserId":this.postData.myUser.id,"postId":this.postData.id})
+        .subscribe(()=>this.getPostReactions()),100);
+
+      }
+    },
+    err=>{
+      this.postService.react({"type":type,"myUserId":this.postData.myUser.id,"postId":this.postData.id})
+      .subscribe(()=>this.getPostReactions());
+    });
+
   }
 }
