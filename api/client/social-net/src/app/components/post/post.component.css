@@ -28,11 +28,17 @@
   text-decoration: underline;
 
 }
-.react a{
+.react-active{
   color:rgba(225,40,80,1)!important;
-
+}
+.react a{
+  color:rgba(50,50,50,1);
+}
+.reactions a{
+  color:rgba(225,40,80,1)!important;
 }
 .react a:hover{
+  color:rgba(225,40,80,1)!important;
   text-decoration: underline;
   cursor: pointer;
 }

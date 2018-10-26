@@ -13,14 +13,14 @@
   <div *ngIf="postData.content"class="image-wrap">
     <img src="../../../assets/images/def_pp.jpg"/>
   </div>
-  <div *ngIf="reactCounts>0" class="ml-4 mt-1 react">
+  <div *ngIf="reactCounts>0" class="ml-4 mt-1 reactions">
     <small><a><div style="display:inline"[@routerTransition]><b>{{reactCounts}}</b></div> Reactions</a></small>
   </div>
   <div class="react card-body">
-  <a (click)="onReact('Like')" class="ml-4"><i class="mr-1 far fa-thumbs-up"></i>Like</a>
-  <a (click)="onReact('Love')" class="ml-3"><i class="mr-1 fas fa-heart"></i>Love</a>
-  <a (click)="onReact('Eye-Roll')" class="ml-3"><i class="mr-1 far fa-meh-rolling-eyes"></i>Eye-Roll</a>
-  <a (click)="onReact('Judge')" class="ml-3"><i class="mr-1 fas fa-gavel"></i>Judge</a>
+  <a (click)="onReact('Like')" class="ml-4" [ngClass]="{'react-active': userReaction == 'Like'}"><i class="mr-1 far fa-thumbs-up"></i>Like</a>
+  <a (click)="onReact('Love')" class="ml-3" [ngClass]="{'react-active': userReaction == 'Love'}"><i class="mr-1 fas fa-heart"></i>Love</a>
+  <a (click)="onReact('Eye-Roll')" class="ml-3" [ngClass]="{'react-active': userReaction == 'Eye-Roll'}"><i class="mr-1 far fa-meh-rolling-eyes"></i>Eye-Roll</a>
+  <a (click)="onReact('Judge')" class="ml-3" [ngClass]="{'react-active': userReaction == 'Judge'}"><i class="mr-1 fas fa-gavel"></i>Judge</a>
   <a class="ml-3"><i class="mr-1 fas fa-bullhorn"></i>Shout</a>
   <a class="ml-3 mr-1"><i class="mr-1 far fa-comment"></i>Comment</a>
 </div>
