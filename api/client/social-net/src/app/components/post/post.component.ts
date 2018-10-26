@@ -47,10 +47,8 @@ export class PostComponent implements OnInit {
         this.postService.deleteReaction(react.id).subscribe(()=>this.ngOnInit());
       }
       else{
-        this.postService.deleteReaction(react.id).subscribe(()=>this.ngOnInit());
-        setTimeout(()=>this.postService.react({"type":type,"myUserId":this.user.id,"postId":this.postData.id})
-        .subscribe(()=>this.ngOnInit()),5);
-
+        this.postService.editReaction({"type":type,"myUserId":this.user.id,"postId":this.postData.id,"id":react.id})
+        .subscribe(()=>this.ngOnInit());
       }
     },
     err=>{
