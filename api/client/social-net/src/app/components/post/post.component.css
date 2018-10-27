@@ -30,6 +30,7 @@
 }
 .react-active{
   color:rgba(225,40,80,1)!important;
+  font-weight: 500;
 }
 .react a{
   color:rgba(50,50,50,1);

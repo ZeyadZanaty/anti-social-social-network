@@ -12,6 +12,9 @@ display: inline;
 font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
 font-size: 12px;
 }
+.ui-float-label label{
+  font-size: 14.4px!important;
+}
 *{
   font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
 }

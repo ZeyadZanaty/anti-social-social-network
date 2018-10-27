@@ -19,7 +19,7 @@
     "loopback-component-explorer": "^6.0.0",
     "loopback-connector-postgresql": "^2.9.0",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0"
+    "strong-error-handler": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",

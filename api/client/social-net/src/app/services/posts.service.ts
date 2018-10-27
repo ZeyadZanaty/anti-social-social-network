@@ -12,6 +12,7 @@ export class PostsService {
   postsUrl:string = "http://localhost:3000/api/posts/";
   usersUrl:string = "http://localhost:3000/api/myUsers/";
   reactionsUrl:string = "http://localhost:3000/api/reactions/";
+  at = sessionStorage.getItem("at");
   constructor (private _http: Http, public router:Router) {};
 
   newPost(post){
@@ -25,14 +26,13 @@ export class PostsService {
   }
 
   getFriendsPosts(id){
-    return this._http.get(this.usersUrl+id+"/friends?filter[include][posts]=myUser")
+    return this._http.get(this.usersUrl+id+"/friends?filter[include][posts]=myUser&access_token="+this.at)
     .map(data => data.json());
   }
   react(reaction){
     return this._http.post(this.reactionsUrl,reaction)
     .map(data => data.json());
   }
-
   getPostReactions(id){
     return this._http.get(this.postsUrl+id+"/reaction")
     .map(data => data.json());
