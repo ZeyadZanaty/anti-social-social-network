@@ -4,12 +4,14 @@ import { NavigationEnd } from '@angular/router';
 import { UserService } from "../../services/user.service";
 import { slideToRightFaster } from '../../router.animations'
 import { PostsService } from "../../services/posts.service";
+import { ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [slideToRightFaster()],
+  providers: [ConfirmationService]
 })
 export class HomeComponent implements OnInit {
 
@@ -27,6 +29,7 @@ export class HomeComponent implements OnInit {
     private route:ActivatedRoute,private userService:UserService) { }
 
   ngOnInit() {
+    this.displayMessaageDialog = false;
     let at=sessionStorage.getItem("at");
     this.userID = parseInt(sessionStorage.getItem("id"));
     this.display=true;
@@ -59,7 +62,6 @@ export class HomeComponent implements OnInit {
     return postsData;
   }
 
-
   onPost(){
     let newPost = {
       "content":this.postText,
@@ -81,7 +83,7 @@ export class HomeComponent implements OnInit {
   }else{
     this.displayMessage='Add Something before posting..';
     this.displayFailSuccess=true;
-    this.displayMessaageDialog = true;
+    this.displayMessaageDialog=true;
   }
 }
 

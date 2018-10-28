@@ -1,8 +1,8 @@
 <div class="card">
   <div class="card-header" aria-describedby="date">
-    <a *ngIf="postData.myUser.id==user.id"style="display:inline; float:right;" >X</a>
-    <img class="user-avatar mr-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
-    <span *ngIf="postData.myUser">{{postData.myUser.realm}}</span>
+    <a class="delete" pTooltip="Delete this shit of a post.." tooltipPosition="top" (click)="onDelete()" *ngIf="postData.myUser.id==user.id"style="display:inline; float:right;" ><i class="fas fa-fire-extinguisher"></i></a>
+    <img routerLink="/profile/{{postData.myUser.id}}" class="user-avatar mr-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
+    <span routerLink="/profile/{{postData.myUser.id}}" *ngIf="postData.myUser">{{postData.myUser.realm}}</span>
     <small id="date" class="form-text text-muted">
       <span>{{postData.time | date:'medium'}}</span>
   </small>
@@ -27,3 +27,4 @@
 </div>
 </div>
 <hr>
+<p-confirmDialog [style]="{'font-size':'2px'}" [responsive]="false" [autoZIndex]="false" [baseZIndex]="100000" header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

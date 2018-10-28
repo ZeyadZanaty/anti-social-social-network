@@ -25,6 +25,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
 import { MessageDialogComponent } from './helpers/message-dialog/message-dialog.component';
 import { NavbarComponent } from './helpers/navbar/navbar.component';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NavbarComponent } from './helpers/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ConfirmDialogModule,
     FormsModule,
     InputTextModule,
     ButtonModule,

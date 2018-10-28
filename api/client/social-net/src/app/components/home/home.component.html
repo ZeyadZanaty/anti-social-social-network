@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <body *ngIf="user" class="row">
-  <div class="py-4 side" [@slideToRightFaster] id="side">
+  <div  class="py-4 side" [@slideToRightFaster] id="side">
     <div class="col-xs-12" routerLink="/profile/{{userID}}" class="nav-link" href="#"><i style="color:rgba(225,40,80,0.9)"  class="pi pi-user ml-3 mr-1"></i>
       <span> {{user.realm}}</span>
         <img class="user-avatar ml-3" src="../../../assets/images/def_pp.jpg" width="35px" height="35px"/>
@@ -34,6 +34,7 @@
   </div>
 </div>
 </body>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>
 
 <app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
 </app-message-dialog>

@@ -49,4 +49,8 @@ export class PostsService {
     return this._http.put(this.reactionsUrl,reaction)
     .map(data => data.json());
   }
+  deletePost(postid){
+    return this._http.delete(this.postsUrl+postid)
+    .map(data => data.json());
+  }
 }

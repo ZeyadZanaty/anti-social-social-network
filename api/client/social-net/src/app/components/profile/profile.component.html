@@ -1,4 +1,28 @@
 <app-navbar></app-navbar>
-<p>
-  profile works!
-</p>
+<body class="row" >
+    <div *ngIf="user" class="main-container" style="position:fixed">
+        <div class="ui-grid-col-3" [@slideToRightFaster]>
+            <img *ngIf="!user.picture" class="user-avatar ui-g-12" src="assets/images/def_pp.jpg">
+            <img *ngIf="user.picture" class="user-avatar ui-g-12" src="http://localhost:3000/api/Containers/pictures/download/{{user.picture}}">
+            <div class='ui-g-12 ui-sm-6'>
+                <h4 style="font-family:'Armata';margin-top:5px; margin-left:5px; color:#415d72;">
+          <i style="margin-right:10px; font-size:0.6em;"></i>{{user.realm}}</h4>
+            </div>
+            <div class='ui-g-10 ui-sm-6'><i class="pi pi-user"></i> E-mail: {{user.email}}</div>
+            <div class='ui-g-10 ui-sm-6'><i class="pi pi-users"></i> Username: {{user.username}}</div>
+            <div class='ui-g-10 ui-sm-6'><i class="pi pi-exclamation-triangle"></i> Gender: {{user.gender}}</div>
+            <!-- <div class='ui-g-10 ui-sm-6'><i class="pi pi-globe"></i> Following: {{user.friends.length}}</div> -->
+            <!-- display friends tile -->
+            <!-- <div class='ui-g-10 ui-sm-6'><i class="pi pi-cog"></i> Followers: {{user.friends.leght}}</div> -->
+        </div>
+    </div>
+    <div *ngIf="user" class="main-container2">
+        <div class="ui-grid-col-12" [@routerTransition]>
+          <div *ngFor="let post of postsData" class="mt-1 post">
+            <app-post [postData]="post" [user]="user"></app-post>
+          </div>
+        </div>
+    </div>
+    <app-message-dialog [displayFailSuccess]="displayFailSuccess" [displayMessaageDialog]="displayMessaageDialog" [displayMessage]="displayMessage">
+    </app-message-dialog>
+</body>

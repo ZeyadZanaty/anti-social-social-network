@@ -24,9 +24,9 @@ body{
   color:white!important;
 }
 div.main {
-  margin-left: 25%;
+  margin-left: 25%!important;
   padding: 1px 1px;
-  height: 1000px;
+  height: 100%;
 }
 .btn{
 float: right!important;
